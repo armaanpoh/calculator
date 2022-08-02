@@ -199,40 +199,40 @@ def highlight(x,y):
 
 while (True):
   numberchoice = input("Choose a number. Press enter to continue. ")
-  if (numberchoice == "1"):
+  res = int("".join(map(str, number)))
+    print(res)
+  if (res == 1):
     highlight(-90,140)
     number = number+[numberchoice]
-  elif (numberchoice == "2"):
+  elif (res == 2):
     highlight(-40,140)
     number = number+[numberchoice]
-  elif (numberchoice == "3"):
+  elif (res == 3):
     highlight(10,140)
     number = number+[numberchoice]
-  elif (numberchoice == "4"):
+  elif (res == 4):
     highlight(-90,90)
     number = number+[numberchoice]
-  elif (numberchoice == "5"):
+  elif (res == 5):
     highlight(-40,90)
     number = number+[numberchoice]
-  elif (numberchoice == "6"):
+  elif (res == 6):
     highlight(10,90)
     number = number+[numberchoice]
-  elif (numberchoice == "7"):
+  elif (res == 7):
     highlight(-90,40)
     number = number+[numberchoice]
-  elif (numberchoice == "8"):
+  elif (res == 8):
     highlight(-40,40)
     number = number+[numberchoice]
-  elif (numberchoice == "9"):
+  elif (res == 9):
     highlight(10,40)
     number = number+[numberchoice]
-  elif (numberchoice == "0"):
+  elif (res == 0):
     highlight(-40,-10)
     number = number+[numberchoice]
   elif (numberchoice == ""):
     break
-res = int("".join(map(str, number)))
-print(res)
 
 operator = input("Choose an operator. ")
 if (operator == "+"):
