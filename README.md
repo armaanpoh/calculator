@@ -1,1 +1,1 @@
-This is a calculator built with Turtle in Python.
+This is a calculator made with Turtle in Python.
