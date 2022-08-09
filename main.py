@@ -199,45 +199,49 @@ def highlight(x,y):
 
 while (True):
   numberchoice = input("Choose a number. Press enter to continue. ")
-  res = int("".join(map(str, number)))
-    print(res)
-  if (res == 1):
-    highlight(-90,140)
-    number = number+[numberchoice]
-  elif (res == 2):
-    highlight(-40,140)
-    number = number+[numberchoice]
-  elif (res == 3):
-    highlight(10,140)
-    number = number+[numberchoice]
-  elif (res == 4):
-    highlight(-90,90)
-    number = number+[numberchoice]
-  elif (res == 5):
-    highlight(-40,90)
-    number = number+[numberchoice]
-  elif (res == 6):
-    highlight(10,90)
-    number = number+[numberchoice]
-  elif (res == 7):
-    highlight(-90,40)
-    number = number+[numberchoice]
-  elif (res == 8):
-    highlight(-40,40)
-    number = number+[numberchoice]
-  elif (res == 9):
-    highlight(10,40)
-    number = number+[numberchoice]
-  elif (res == 0):
-    highlight(-40,-10)
-    number = number+[numberchoice]
-  elif (numberchoice == ""):
-    break
-
+  print(numberchoice)
+  try:
+    res = (numberchoice)
+    if (res == "1"):
+      highlight(-90,140)
+      number = number+[numberchoice]
+    elif (res == "2"):
+      highlight(-40,140)
+      number = number+[numberchoice]
+    elif (res == "3"):
+      highlight(10,140)
+      number = number+[numberchoice]
+    elif (res == "4"):
+      highlight(-90,90)
+      number = number+[numberchoice]
+    elif (res == "5"):
+      highlight(-40,90)
+      number = number+[numberchoice]
+    elif (res == "6"):
+      highlight(10,90)
+      number = number+[numberchoice]
+    elif (res == "7"):
+      highlight(-90,40)
+      number = number+[numberchoice]
+    elif (res == "8"):
+      highlight(-40,40)
+      number = number+[numberchoice]
+    elif (res == "9"):
+      highlight(10,40)
+      number = number+[numberchoice]
+    elif (res == "0"):
+      highlight(-40,-10)
+      number = number+[numberchoice]
+    elif (numberchoice == ""):
+      break
+    else:
+      print("Try again. ")
+  except:
+    print("Error has occurred. ")
+  
 operator = input("Choose an operator. ")
 if (operator == "+"):
   highlight(80,140)
-  
 elif (operator == "-"):
   highlight(80,90)
 elif (operator == "x"):
@@ -247,37 +251,42 @@ elif (operator == "/"):
 
 while (True):
   numberchoice2 = input("Choose a second number. Press enter to continue. ")
-  if (numberchoice2 == "1"):
-    highlight(-90,140)
-    number2 = number2+[numberchoice2]
-  elif (numberchoice2 == "2"):
-    highlight(-40,140)
-    number2 = number2+[numberchoice2]
-  elif (numberchoice2 == "3"):
-    highlight(10,140)
-    number2 = number2+[numberchoice2]
-  elif (numberchoice2 == "4"):
-    highlight(-90,90)
-    number2 = number2+[numberchoice2]
-  elif (numberchoice2 == "5"):
-    highlight(-40,90)
-    number2 = number2+[numberchoice2]
-  elif (numberchoice2 == "6"):
-    highlight(10,90)
-    number2 = number2+[numberchoice2]
-  elif (numberchoice2 == "7"):
-    highlight(-90,40)
-    number2 = number2+[numberchoice2]
-  elif (numberchoice2 == "8"):
-    highlight(-40,40)
-    number2 = number2+[numberchoice2]
-  elif (numberchoice2 == "9"):
-    highlight(10,40)
-    number2 = number2+[numberchoice2]
-  elif (numberchoice2 == "0"):
-    highlight(-40,-10)
-    number2 = number2+[numberchoice2]
-  elif (numberchoice2 == ""):
-    break
-res2 = int("".join(map(str, number2)))
-print(res2)
+  print(numberchoice2)
+  try:
+    res = (numberchoice2)
+    if (numberchoice2 == "1"):
+      highlight(-90,140)
+      number2 = number2+[numberchoice2]
+    elif (numberchoice2 == "2"):
+      highlight(-40,140)
+      number2 = number2+[numberchoice2]
+    elif (numberchoice2 == "3"):
+      highlight(10,140)
+      number2 = number2+[numberchoice2]
+    elif (numberchoice2 == "4"):
+      highlight(-90,90)
+      number2 = number2+[numberchoice2]
+    elif (numberchoice2 == "5"):
+      highlight(-40,90)
+      number2 = number2+[numberchoice2]
+    elif (numberchoice2 == "6"):
+      highlight(10,90)
+      number2 = number2+[numberchoice2]
+    elif (numberchoice2 == "7"):
+      highlight(-90,40)
+      number2 = number2+[numberchoice2]
+    elif (numberchoice2 == "8"):
+      highlight(-40,40)
+      number2 = number2+[numberchoice2]
+    elif (numberchoice2 == "9"):
+      highlight(10,40)
+      number2 = number2+[numberchoice2]
+    elif (numberchoice2 == "0"):
+      highlight(-40,-10)
+      number2 = number2+[numberchoice2]
+    elif (numberchoice2 == ""):
+      break
+    else:
+      print("Try again. ")
+  except:
+    print("Error has occurred. ")
