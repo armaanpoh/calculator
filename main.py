@@ -1,6 +1,5 @@
-
-
 import turtle
+import time
 
 t = turtle.Turtle()
 
@@ -186,6 +185,13 @@ t.forward(150)
 t.left(90)
 t.forward(50)
 
+def draw(numb):
+  t.penup()
+  t.goto(-70,148)
+  t.pendown
+  t.color("black")
+  t.write(numb, align="center", font=("Arial", 16, "normal"))
+
 def highlight(x,y):
   t.penup()
   t.goto(x,y)
@@ -196,6 +202,9 @@ def highlight(x,y):
     t.forward(50)
     t.left(90)
   t.end_fill()
+  time.sleep(0.2)
+  for x in range(9):
+    t.undo()
 
 while (True):
   numberchoice = input("Choose a number. Press enter to continue. ")
@@ -205,33 +214,43 @@ while (True):
     if (res == "1"):
       highlight(-90,140)
       number = number+[numberchoice]
+      draw(1)
     elif (res == "2"):
       highlight(-40,140)
       number = number+[numberchoice]
+      draw(2)
     elif (res == "3"):
       highlight(10,140)
       number = number+[numberchoice]
+      draw(3)
     elif (res == "4"):
       highlight(-90,90)
       number = number+[numberchoice]
+      draw(4)
     elif (res == "5"):
       highlight(-40,90)
       number = number+[numberchoice]
+      draw(5)
     elif (res == "6"):
       highlight(10,90)
       number = number+[numberchoice]
+      draw(6)
     elif (res == "7"):
       highlight(-90,40)
       number = number+[numberchoice]
+      draw(7)
     elif (res == "8"):
       highlight(-40,40)
       number = number+[numberchoice]
+      draw(8)
     elif (res == "9"):
       highlight(10,40)
       number = number+[numberchoice]
+      draw(9)
     elif (res == "0"):
       highlight(-40,-10)
       number = number+[numberchoice]
+      draw(0)
     elif (numberchoice == ""):
       break
     else:
@@ -257,33 +276,43 @@ while (True):
     if (numberchoice2 == "1"):
       highlight(-90,140)
       number2 = number2+[numberchoice2]
+      draw(1)
     elif (numberchoice2 == "2"):
       highlight(-40,140)
       number2 = number2+[numberchoice2]
+      draw(2)
     elif (numberchoice2 == "3"):
       highlight(10,140)
       number2 = number2+[numberchoice2]
+      draw(3)
     elif (numberchoice2 == "4"):
       highlight(-90,90)
       number2 = number2+[numberchoice2]
+      draw(4)
     elif (numberchoice2 == "5"):
       highlight(-40,90)
       number2 = number2+[numberchoice2]
+      draw(5)
     elif (numberchoice2 == "6"):
       highlight(10,90)
       number2 = number2+[numberchoice2]
+      draw(6)
     elif (numberchoice2 == "7"):
       highlight(-90,40)
       number2 = number2+[numberchoice2]
+      draw(7)
     elif (numberchoice2 == "8"):
       highlight(-40,40)
       number2 = number2+[numberchoice2]
+      draw(8)
     elif (numberchoice2 == "9"):
       highlight(10,40)
       number2 = number2+[numberchoice2]
+      draw(9)
     elif (numberchoice2 == "0"):
       highlight(-40,-10)
       number2 = number2+[numberchoice2]
+      draw(0)
     elif (numberchoice2 == ""):
       break
     else:
