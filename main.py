@@ -1,11 +1,15 @@
 import turtle
 import time
 
+#80 is the limit of the x-value in the display
+
 t = turtle.Turtle()
+n = turtle.Turtle()
 
 number = []
 number2 = []
 numvar = [-70,148]
+
 
 def rectangle():
   for x in range(4):
@@ -187,10 +191,10 @@ t.left(90)
 t.forward(50)
 
 def draw(numb):
-  t.pendown
-  t.color("black")
-  t.write(numb, align="center", font=("Arial", 16, "normal"))
-  t.penup()
+  n.pendown
+  n.color("black")
+  n.write(numb, align="center", font=("Arial", 16, "normal"))
+  n.penup()
   print(numvar[0])
   numvar[0] += 15
   print(numvar[0])
@@ -208,22 +212,22 @@ def highlight(x,y):
   time.sleep(0.2)
   for x in range(9):
     t.undo()
-  t.penup()
+  n.penup()
+  n.goto(numvar[0],148)
 
-t.penup()
-t.goto(-70,148)
 while (True):
   numberchoice = input("Choose a number. Press enter to continue. ")
   print(numberchoice)
   try:
+    for x in number:
+      print(x)
     res = (numberchoice)
     if (res == "1"):
       highlight(-90,140)
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      draw(1)
-      
+      draw(1) 
     elif (res == "2"):
       highlight(-40,140)
       number = number+[numberchoice]
@@ -268,6 +272,7 @@ while (True):
       print("Try again. ")
   except:
     print("Error has occurred. ")
+
 """ 
 operator = input("Choose an operator. ")
 if (operator == "+"):
