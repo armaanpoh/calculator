@@ -1,13 +1,19 @@
 import turtle
 import time
+import queue
 
 #80 is the limit of the x-value in the display
 
 t = turtle.Turtle()
 n = turtle.Turtle()
+q = queue.SimpleQueue()
 
 number = []
 number2 = []
+
+q.put()
+print(q.empty())
+"""
 numvar = [-70,148]
 
 
@@ -273,7 +279,6 @@ while (True):
   except:
     print("Error has occurred. ")
 
-""" 
 operator = input("Choose an operator. ")
 if (operator == "+"):
   highlight(80,140)
