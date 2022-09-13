@@ -1,19 +1,15 @@
 import turtle
 import time
-import queue
 
 #80 is the limit of the x-value in the display
 
 t = turtle.Turtle()
 n = turtle.Turtle()
-q = queue.SimpleQueue()
 
 number = []
 number2 = []
+display = []
 
-q.put()
-print(q.empty())
-"""
 numvar = [-70,148]
 
 
@@ -221,6 +217,10 @@ def highlight(x,y):
   n.penup()
   n.goto(numvar[0],148)
 
+  def drawList():
+    for x in range(len(display)):
+      draw(display.pop())
+    
 while (True):
   numberchoice = input("Choose a number. Press enter to continue. ")
   print(numberchoice)
@@ -233,51 +233,108 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      draw(1) 
+      if len(display) < 9:
+        display.append(numberchoice)
+        print("display length " + str(len(display)))
+      elif len(display) == 9:
+        n.clear()
+        #drawList()
+        display.pop()
+        display.append(numberchoice)
+        print("display length " + str(len(display)))
+      draw(1)
+    """      
     elif (res == "2"):
       highlight(-40,140)
       number = number+[numberchoice]
       draw(2)
+      if display.size < 9:
+        display.append(numberchoice)
+      elif display.size == 9:
+        display.pop()
+        display.append(numberchoice)
     elif (res == "3"):
       highlight(10,140)
       number = number+[numberchoice]
       draw(3)
+      if display.size < 9:
+        display.append(numberchoice)
+      elif display.size == 9:
+        display.pop()
+        display.append(numberchoice)
     elif (res == "4"):
       highlight(-90,90)
       t.penup()
       t.goto(numvar)
       number = number+[numberchoice]
       draw(4)
+      if display.size < 9:
+        display.append(numberchoice)
+      elif display.size == 9:
+        display.pop()
+        display.append(numberchoice)
     elif (res == "5"):
       highlight(-40,90)
       number = number+[numberchoice]
       draw(5)
+      if display.size < 9:
+        display.append(numberchoice)
+      elif display.size == 9:
+        display.pop()
+        display.append(numberchoice)
     elif (res == "6"):
       highlight(10,90)
       number = number+[numberchoice]
       draw(6)
+      if display.size < 9:
+        display.append(numberchoice)
+      elif display.size == 9:
+        display.pop()
+        display.append(numberchoice)
     elif (res == "7"):
       highlight(-90,40)
       number = number+[numberchoice]
       draw(7)
+      if display.size < 9:
+        display.append(numberchoice)
+      elif display.size == 9:
+        display.pop()
+        display.append(numberchoice)
     elif (res == "8"):
       highlight(-40,40)
       number = number+[numberchoice]
       draw(8)
+      if display.size < 9:
+        display.append(numberchoice)
+      elif display.size == 9:
+        display.pop()
+        display.append(numberchoice)
     elif (res == "9"):
       highlight(10,40)
       number = number+[numberchoice]
       draw(9)
+      if display.size < 9:
+        display.append(numberchoice)
+      elif display.size == 9:
+        display.pop()
+        display.append(numberchoice)
     elif (res == "0"):
       highlight(-40,-10)
       number = number+[numberchoice]
       draw(0)
+      if display.size < 9:
+        display.append(numberchoice)
+      elif display.size == 9:
+        display.pop()
+        display.append(numberchoice)
     elif (numberchoice == ""):
       break
+    
     else:
       print("Try again. ")
-  except:
-    print("Error has occurred. ")
+      """
+  except Exception as e:
+    print("Error has occurred. ", e)
 
 operator = input("Choose an operator. ")
 if (operator == "+"):
@@ -339,4 +396,4 @@ while (True):
     else:
       print("Try again. ")
   except:
-    print("Error has occurred. ")"""
+    print("Error has occurred. ")
