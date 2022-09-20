@@ -197,9 +197,9 @@ def draw(numb):
   n.color("black")
   n.write(numb, align="center", font=("Arial", 16, "normal"))
   n.penup()
-  print(numvar[0])
+  #print(numvar[0])
   numvar[0] += 15
-  print(numvar[0])
+  #print(numvar[0])
 
 def highlight(x,y):
   t.penup()
@@ -216,10 +216,6 @@ def highlight(x,y):
     t.undo()
   n.penup()
   n.goto(numvar[0],148)
-
-  def drawList():
-    for x in range(len(display)):
-      draw(display.pop())
     
 while (True):
   numberchoice = input("Choose a number. Press enter to continue. ")
@@ -235,12 +231,17 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
+        print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
       elif len(display) == 9:
         n.clear()
-        #drawList()
         display.pop()
         display.append(numberchoice)
+        #n.goto(-70,148)
+        numvar[0]=-70
+        for x in display:
+          draw(x)
+          print("I made it")
         print("display length " + str(len(display)))
       draw(1)
     """      
