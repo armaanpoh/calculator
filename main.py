@@ -216,6 +216,8 @@ def highlight(x,y):
     t.undo()
   n.penup()
   n.goto(numvar[0],148)
+
+div = 9
     
 while (True):
   numberchoice = input("Choose a number. Press enter to continue. ")
@@ -233,18 +235,23 @@ while (True):
         display.append(numberchoice)
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
-      elif len(display) == 9:
-        n.clear()
-        display.pop()
-        display.append(numberchoice)
-        #n.goto(-70,148)
-        numvar[0]=-70
-        for x in display:
-          draw(x)
-          print("I made it")
-        print("display length " + str(len(display)))
+      # elif len(display) == 9:
+      #   n.clear()
+      #   display.pop()
+      #   display.append(numberchoice)
+      for x in range (20):
+        if len(display) == x*9:
+          n.clear()
+          print("error found")
+          n.goto(-70,148)
+          numvar[0]=-70
+          for x in display:
+            draw(x)
+            print("I made it")
+          print("display length " + str(len(display))) 
       draw(1)
-    """      
+
+    """
     elif (res == "2"):
       highlight(-40,140)
       number = number+[numberchoice]
