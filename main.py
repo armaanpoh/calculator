@@ -195,10 +195,11 @@ t.forward(50)
 def draw(numb):
   n.pendown
   n.color("black")
-  n.write(numb, align="center", font=("Arial", 16, "normal"))
+  n.write(numb, move=True, align="center", font=("Arial", 16, "normal"))
   n.penup()
   #print(numvar[0])
   numvar[0] += 15
+  n.goto(numvar[0],numvar[1])
   #print(numvar[0])
 
 def highlight(x,y):
@@ -232,115 +233,157 @@ while (True):
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
       if len(display) < 9:
+        draw(1)
         display.append(numberchoice)
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
-      # elif len(display) == 9:
-      #   n.clear()
-      #   display.pop()
-      #   display.append(numberchoice)
-      for x in range (20):
-        if len(display) == x*9:
+      if len(display) == 9:
           n.clear()
-          print("error found")
-          n.goto(-70,148)
-          numvar[0]=-70
+          numvar[0],numvar[1] = -70,148
           for x in display:
-            draw(x)
-            print("I made it")
-          print("display length " + str(len(display))) 
-      draw(1)
-
-    """
+            draw(x) 
+    
     elif (res == "2"):
       highlight(-40,140)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      draw(2)
-      if display.size < 9:
+      if len(display) < 9:
+        draw(2)
         display.append(numberchoice)
-      elif display.size == 9:
-        display.pop()
-        display.append(numberchoice)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
+      
     elif (res == "3"):
       highlight(10,140)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
+      if len(display) < 9:
+        display.append(numberchoice)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(3)
-      if display.size < 9:
-        display.append(numberchoice)
-      elif display.size == 9:
-        display.pop()
-        display.append(numberchoice)
     elif (res == "4"):
       highlight(-90,90)
       t.penup()
-      t.goto(numvar)
+      t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
+      if len(display) < 9:
+        display.append(numberchoice)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(4)
-      if display.size < 9:
-        display.append(numberchoice)
-      elif display.size == 9:
-        display.pop()
-        display.append(numberchoice)
     elif (res == "5"):
       highlight(-40,90)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
+      if len(display) < 9:
+        display.append(numberchoice)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(5)
-      if display.size < 9:
-        display.append(numberchoice)
-      elif display.size == 9:
-        display.pop()
-        display.append(numberchoice)
     elif (res == "6"):
       highlight(10,90)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
+      if len(display) < 9:
+        display.append(numberchoice)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(6)
-      if display.size < 9:
-        display.append(numberchoice)
-      elif display.size == 9:
-        display.pop()
-        display.append(numberchoice)
     elif (res == "7"):
       highlight(-90,40)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
+      if len(display) < 9:
+        display.append(numberchoice)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(7)
-      if display.size < 9:
-        display.append(numberchoice)
-      elif display.size == 9:
-        display.pop()
-        display.append(numberchoice)
     elif (res == "8"):
       highlight(-40,40)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
+      if len(display) < 9:
+        display.append(numberchoice)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(8)
-      if display.size < 9:
-        display.append(numberchoice)
-      elif display.size == 9:
-        display.pop()
-        display.append(numberchoice)
     elif (res == "9"):
       highlight(10,40)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
+      if len(display) < 9:
+        display.append(numberchoice)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(9)
-      if display.size < 9:
-        display.append(numberchoice)
-      elif display.size == 9:
-        display.pop()
-        display.append(numberchoice)
     elif (res == "0"):
       highlight(-40,-10)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
+      if len(display) < 9:
+        display.append(numberchoice)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(0)
-      if display.size < 9:
-        display.append(numberchoice)
-      elif display.size == 9:
-        display.pop()
-        display.append(numberchoice)
     elif (numberchoice == ""):
       break
     
     else:
       print("Try again. ")
-      """
   except Exception as e:
     print("Error has occurred. ", e)
 
@@ -361,43 +404,153 @@ while (True):
     res = (numberchoice2)
     if (numberchoice2 == "1"):
       highlight(-90,140)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
+      if len(display) < 9:
+        display.append(numberchoice2)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(1)
     elif (numberchoice2 == "2"):
       highlight(-40,140)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
+      if len(display) < 9:
+        display.append(numberchoice2)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(2)
     elif (numberchoice2 == "3"):
       highlight(10,140)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
+      if len(display) < 9:
+        display.append(numberchoice2)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(3)
     elif (numberchoice2 == "4"):
       highlight(-90,90)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
+      if len(display) < 9:
+        display.append(numberchoice2)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(4)
     elif (numberchoice2 == "5"):
       highlight(-40,90)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
+      if len(display) < 9:
+        display.append(numberchoice2)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(5)
     elif (numberchoice2 == "6"):
       highlight(10,90)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
+      if len(display) < 9:
+        display.append(numberchoice2)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(6)
     elif (numberchoice2 == "7"):
       highlight(-90,40)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
+      if len(display) < 9:
+        display.append(numberchoice2)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(7)
     elif (numberchoice2 == "8"):
       highlight(-40,40)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
+      if len(display) < 9:
+        display.append(numberchoice2)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(8)
     elif (numberchoice2 == "9"):
       highlight(10,40)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
+      if len(display) < 9:
+        display.append(numberchoice2)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(9)
     elif (numberchoice2 == "0"):
       highlight(-40,-10)
+      t.penup()
+      t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
+      if len(display) < 9:
+        display.append(numberchoice2)
+        print("Display array [0] value="+display[0])
+        print("display length " + str(len(display)))
+      if len(display) == 9:
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
       draw(0)
     elif (numberchoice2 == ""):
       break
