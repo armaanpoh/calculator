@@ -6,6 +6,8 @@ import time
 t = turtle.Turtle()
 n = turtle.Turtle()
 
+full=False
+
 number = []
 number2 = []
 display = []
@@ -233,15 +235,20 @@ while (True):
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
       if len(display) < 9:
-        draw(1)
         display.append(numberchoice)
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
       if len(display) == 9:
+          display.pop(0)
+          full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
-            draw(x) 
+            draw(x)
+            print("x = "+x)
+      if full==False:
+        draw(1)
+    
     
     elif (res == "2"):
       highlight(-40,140)
@@ -249,15 +256,19 @@ while (True):
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
       if len(display) < 9:
-        draw(2)
         display.append(numberchoice)
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
       if len(display) == 9:
+          display.pop(0)
+          full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
+            print("x = "+x)
+      if full==False:
+        draw(2)      
       
     elif (res == "3"):
       highlight(10,140)
@@ -269,11 +280,16 @@ while (True):
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
       if len(display) == 9:
+          display.pop(0)
+          full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
-            draw(x) 
-      draw(3)
+            draw(x)
+            print("x = "+x)
+      if full==False:
+        draw(3)
+        
     elif (res == "4"):
       highlight(-90,90)
       t.penup()
@@ -284,11 +300,16 @@ while (True):
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
       if len(display) == 9:
+          display.pop(0)
+          full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
-            draw(x) 
-      draw(4)
+            draw(x)
+            print("x = "+x)
+      if full==False:
+        draw(4)
+        
     elif (res == "5"):
       highlight(-40,90)
       t.penup()
@@ -299,11 +320,16 @@ while (True):
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
       if len(display) == 9:
+          display.pop(0)
+          full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
-            draw(x) 
-      draw(5)
+            draw(x)
+            print("x = "+x)
+      if full==False:
+        draw(5)
+      
     elif (res == "6"):
       highlight(10,90)
       t.penup()
@@ -314,11 +340,16 @@ while (True):
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
       if len(display) == 9:
+          display.pop(0)
+          full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(6)
+            print("x = "+x)
+      if full==False:
+        draw(6)
+        
     elif (res == "7"):
       highlight(-90,40)
       t.penup()
@@ -329,11 +360,16 @@ while (True):
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
       if len(display) == 9:
+          display.pop(0)
+          full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(7)
+            print("x = "+x)
+      if full==False:
+        draw(7)
+        
     elif (res == "8"):
       highlight(-40,40)
       t.penup()
@@ -344,26 +380,37 @@ while (True):
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
       if len(display) == 9:
+          display.pop(0)
+          full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(8)
+            print("x = "+x)
+      if full==False:
+        draw(8)
+        
     elif (res == "9"):
       highlight(10,40)
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
       if len(display) < 9:
-        display.append(numberchoice)
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
       if len(display) == 9:
+          display.append(numberchoice)
+          display.pop(0)
+          full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
+            print("0 =" + str(numvar[0]) + "1 =" + str(numvar[1]))
             draw(x) 
-      draw(9)
+            print("x = "+x)
+      if full==False:
+        draw(9)
+        
     elif (res == "0"):
       highlight(-40,-10)
       t.penup()
@@ -374,11 +421,15 @@ while (True):
         print("Display array [0] value="+display[0])
         print("display length " + str(len(display)))
       if len(display) == 9:
+          display.pop(0)
+          full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(0)
+            print("x = "+x)
+      if full==False:
+        draw(0)
     elif (numberchoice == ""):
       break
     
