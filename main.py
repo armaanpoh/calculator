@@ -69,7 +69,7 @@ def buttonlayout():
     t.left(90)
     t.pendown()
     
-#buttonlayout()
+buttonlayout()
 
 t.penup()
 t.goto(80,90)
@@ -195,13 +195,13 @@ t.left(90)
 t.forward(50)
 
 def draw(numb):
+  n.goto(numvar[0], numvar[1])
   n.pendown
   n.color("black")
   n.write(numb, move=True, align="center", font=("Arial", 16, "normal"))
   n.penup()
   #print(numvar[0])
   numvar[0] += 15
-  n.goto(numvar[0],numvar[1])
   #print(numvar[0])
 
 def highlight(x,y):
@@ -224,10 +224,7 @@ div = 9
     
 while (True):
   numberchoice = input("Choose a number. Press enter to continue. ")
-  print(numberchoice)
   try:
-    for x in number:
-      print(x)
     res = (numberchoice)
     if (res == "1"):
       highlight(-90,140)
@@ -236,8 +233,7 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -245,7 +241,6 @@ while (True):
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x)
-            print("x = "+x)
       if full==False:
         draw(1)
     
@@ -257,8 +252,7 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -266,7 +260,6 @@ while (True):
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-            print("x = "+x)
       if full==False:
         draw(2)      
       
@@ -277,8 +270,7 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -286,7 +278,6 @@ while (True):
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x)
-            print("x = "+x)
       if full==False:
         draw(3)
         
@@ -297,8 +288,7 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -306,7 +296,6 @@ while (True):
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x)
-            print("x = "+x)
       if full==False:
         draw(4)
         
@@ -317,8 +306,7 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -326,7 +314,6 @@ while (True):
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x)
-            print("x = "+x)
       if full==False:
         draw(5)
       
@@ -337,8 +324,7 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -346,7 +332,6 @@ while (True):
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-            print("x = "+x)
       if full==False:
         draw(6)
         
@@ -357,8 +342,7 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -366,7 +350,6 @@ while (True):
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-            print("x = "+x)
       if full==False:
         draw(7)
         
@@ -377,8 +360,7 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -386,7 +368,6 @@ while (True):
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-            print("x = "+x)
       if full==False:
         draw(8)
         
@@ -396,18 +377,15 @@ while (True):
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
       if len(display) < 9:
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        display.append(numberchoice)
+        number.append(numberchoice)
       if len(display) == 9:
-          display.append(numberchoice)
           display.pop(0)
           full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
-            print("0 =" + str(numvar[0]) + "1 =" + str(numvar[1]))
             draw(x) 
-            print("x = "+x)
       if full==False:
         draw(9)
         
@@ -418,8 +396,7 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -427,7 +404,6 @@ while (True):
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-            print("x = "+x)
       if full==False:
         draw(0)
     elif (numberchoice == ""):
@@ -440,17 +416,25 @@ while (True):
 
 operator = input("Choose an operator. ")
 if (operator == "+"):
+  n.clear()
+  numvar[0],numvar[1] = -70,148
   highlight(80,140)
 elif (operator == "-"):
+  n.clear()
+  numvar[0],numvar[1] = -70,148
   highlight(80,90)
 elif (operator == "x"):
+  n.clear()
+  numvar[0],numvar[1] = -70,148
   highlight(80,40)
 elif (operator == "/"):
+  n.clear()
+  numvar[0],numvar[1] = -70,148
   highlight(80,-10)
 
+display=[]
 while (True):
   numberchoice2 = input("Choose a second number. Press enter to continue. ")
-  print(numberchoice2)
   try:
     res = (numberchoice2)
     if (numberchoice2 == "1"):
@@ -460,14 +444,15 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number2.append(numberchoice2)
       if len(display) == 9:
+          display.pop(0)
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(1)
+      if full==False:
+        draw(1)
     elif (numberchoice2 == "2"):
       highlight(-40,140)
       t.penup()
@@ -475,14 +460,14 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(2)
+      if full==False:
+        draw(2)
     elif (numberchoice2 == "3"):
       highlight(10,140)
       t.penup()
@@ -490,14 +475,14 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(3)
+      if full==False:
+        draw(3)
     elif (numberchoice2 == "4"):
       highlight(-90,90)
       t.penup()
@@ -505,14 +490,14 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(4)
+      if full==False:
+        draw(4)
     elif (numberchoice2 == "5"):
       highlight(-40,90)
       t.penup()
@@ -520,14 +505,14 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(5)
+      if full==False:
+        draw(5)
     elif (numberchoice2 == "6"):
       highlight(10,90)
       t.penup()
@@ -535,14 +520,14 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(6)
+      if full==False:
+        draw(6)
     elif (numberchoice2 == "7"):
       highlight(-90,40)
       t.penup()
@@ -550,14 +535,14 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
-            draw(x) 
-      draw(7)
+            draw(x)
+      if full==False:
+        draw(7) 
     elif (numberchoice2 == "8"):
       highlight(-40,40)
       t.penup()
@@ -565,14 +550,14 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(8)
+      if full==False:
+        draw(8)
     elif (numberchoice2 == "9"):
       highlight(10,40)
       t.penup()
@@ -580,14 +565,14 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(9)
+      if full==False:
+        draw(9)
     elif (numberchoice2 == "0"):
       highlight(-40,-10)
       t.penup()
@@ -595,14 +580,14 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        print("Display array [0] value="+display[0])
-        print("display length " + str(len(display)))
+        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
             draw(x) 
-      draw(0)
+      if full==False:
+        draw(0)
     elif (numberchoice2 == ""):
       break
     else:
