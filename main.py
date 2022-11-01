@@ -1,5 +1,6 @@
 import turtle
 import time
+import math
 
 #80 is the limit of the x-value in the display
 
@@ -233,7 +234,6 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -252,7 +252,6 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -270,7 +269,6 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -288,7 +286,6 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -306,7 +303,6 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -324,7 +320,6 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -342,7 +337,6 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -360,7 +354,6 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -378,7 +371,6 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -396,7 +388,6 @@ while (True):
       number = number+[numberchoice]
       if len(display) < 9:
         display.append(numberchoice)
-        number.append(numberchoice)
       if len(display) == 9:
           display.pop(0)
           full=True
@@ -406,6 +397,19 @@ while (True):
             draw(x) 
       if full==False:
         draw(0)
+    elif (res == "."):
+      number = number+[numberchoice]
+      if len(display) < 9:
+        display.append(numberchoice)
+      if len(display) == 9:
+          display.pop(0)
+          full=True
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
+      if full==False:
+        draw(".")
     elif (numberchoice == ""):
       break
     
@@ -444,7 +448,6 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        number2.append(numberchoice2)
       if len(display) == 9:
           display.pop(0)
           n.clear()
@@ -460,7 +463,6 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
@@ -475,7 +477,6 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
@@ -490,7 +491,6 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
@@ -505,7 +505,6 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
@@ -520,7 +519,6 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
@@ -535,7 +533,6 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
@@ -550,7 +547,6 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
@@ -565,7 +561,6 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
@@ -580,7 +575,6 @@ while (True):
       number2 = number2+[numberchoice2]
       if len(display) < 9:
         display.append(numberchoice2)
-        number2.append(numberchoice2)
       if len(display) == 9:
           n.clear()
           numvar[0],numvar[1] = -70,148
@@ -588,9 +582,64 @@ while (True):
             draw(x) 
       if full==False:
         draw(0)
+    elif (res == "."):
+      number2 = number2+[numberchoice2]
+      if len(display) < 9:
+        display.append(numberchoice2)
+      if len(display) == 9:
+          display.pop(0)
+          full=True
+          n.clear()
+          numvar[0],numvar[1] = -70,148
+          for x in display:
+            draw(x) 
+      if full==False:
+        draw(".")
     elif (numberchoice2 == ""):
       break
     else:
       print("Try again. ")
   except:
     print("Error has occurred. ")
+
+final=0.0
+ans=float(number[0])
+ans2=float(number2[0])
+decimal = False
+decimalAns = ''
+decimalAns2 = ''
+for x in number:
+  if x == ".":
+    decimal = True
+for x in number2:
+  if x == ".":
+    decimal = True
+for x in number:
+  decimalAns += str(x)  
+for x in number2:
+  decimalAns2 += str(x)
+if decimal == False:
+  for x in range(1,len(number)):
+      l = math.floor(math.log10(int(number[x])) + 1)
+      ans = ans * math.pow(10,1)
+      ans += int(number[x])
+  for x in range(1,len(number2)):
+      l = math.floor(math.log10(int(number2[x])) + 1)
+      ans2 = ans2 * math.pow(10,1)
+      ans2 += int(number2[x])
+else:
+    ans = float(decimalAns)
+    ans2 = float(decimalAns2)
+if operator == "+":
+  final = ans+ans2
+elif operator == "-":
+  final = ans-ans2
+elif operator == "*":
+  final = ans*ans2
+elif operator == "/":
+  final = ans/ans2
+n.clear()
+numvar[0],numvar[1] = -70,148
+for x in str(final):
+  draw(x)
+print(final)
