@@ -16,6 +16,7 @@ numberNeg = False
 numberNeg2 = False
 
 numvar = [-70,148]
+per = 0
 
 
 def rectangle():
@@ -234,9 +235,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice)
-      if len(display) == 9:
+      if len(display)+per == 9: 
           display.pop(0)
           full=True
           n.clear()
@@ -244,17 +245,16 @@ while (True):
           for x in display:
             draw(x)
       if full==False:
-        draw(1)
-    
-    
+        draw(1) 
+
     elif (res == "2"):
       highlight(-40,140)
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -269,9 +269,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -286,9 +286,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -303,9 +303,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -320,9 +320,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -337,9 +337,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -354,9 +354,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -371,9 +371,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -388,9 +388,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -400,10 +400,11 @@ while (True):
       if full==False:
         draw(0)
     elif (res == "."):
+      highlight(80,190)
       number = number+[numberchoice]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -456,9 +457,10 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice2)
-      if len(display) == 9:
+        print(display[0])
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -472,9 +474,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice2)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -488,9 +490,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice2)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -504,9 +506,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice2)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -520,9 +522,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice2)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -536,9 +538,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice2)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -552,9 +554,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice2)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -568,9 +570,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice2)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -584,9 +586,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice2)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -600,9 +602,9 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice2)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -612,10 +614,11 @@ while (True):
       if full==False:
         draw(0)
     elif (res == "."):
+      highlight(80,190)
       number2 = number2+[numberchoice2]
-      if len(display) < 9:
+      if len(display)+per < 9:
         display.append(numberchoice2)
-      if len(display) == 9:
+      if len(display)+per == 9:
           display.pop(0)
           full=True
           n.clear()
@@ -674,6 +677,11 @@ elif operator == "/":
   final = ans/ans2
 n.clear()
 numvar[0],numvar[1] = -70,148
-for x in str(final):
-  draw(x)
+final = str(final)
+if decimal:
+  for x in range(8):
+    draw(final[x])
+else:
+  for x in range(9):
+    draw(final[x])
 print(final)
