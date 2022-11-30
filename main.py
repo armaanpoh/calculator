@@ -18,6 +18,7 @@ numberNeg2 = False
 numvar = [-70,148]
 per = 0
 neg = 0
+neg2 = 0
 
 
 def rectangle():
@@ -637,6 +638,22 @@ while (True):
             draw(x) 
       if full==False:
         draw(".")
+    elif (res == "-"):
+      numberNeg2 = True
+      if len(display)+per+neg < 9:
+        display.insert(0,numberchoice2)
+        n.clear()
+        numvar[0],numvar[1] = -70,148
+        for x in display:
+          draw(x)
+      if len(display)+per+neg == 9:
+        display.pop(0)
+        full=True
+        n.clear()
+        numvar[0],numvar[1] = -70,148
+        draw("-")
+        for x in display:
+          draw(x)
       
     elif (numberchoice2 == ""):
       break
@@ -675,14 +692,20 @@ if decimal == False:
     ans2 = ans2 * math.pow(10,1)
     ans2 += int(number2[x])
 else:
-  if numberNeg:
+  if numberNeg and numberNeg2:
     ans = float(decimalAns[2:])
-    ans = float(decimalAns)
+    ans2 = float(decimalAns2[2:])
+  elif numberNeg and not numberNeg2:
+    ans = float(decimalAns[2:])
+    #ans = float(decimalAns)
     ans2 = float(decimalAns2)
+  elif numberNeg2 and not numberNeg:
+    ans = float(decimalAns)
+    ans2 = float(decimalAns2[2:])
 if numberNeg:
   ans=ans*-1
 if numberNeg2:
-  ans2=ans*-1
+  ans2=ans2*-1
 if operator == "+":
   final = ans+ans2
 elif operator == "-":
