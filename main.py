@@ -663,8 +663,8 @@ while (True):
     print("Error has occurred. ")
 
 final=0.0
-ans=float(number[0])
-ans2=float(number2[0])
+ans=0.0
+ans2=0.0
 decimal = False
 decimalAns = ''
 decimalAns2 = ''
@@ -676,36 +676,38 @@ for x in number2:
     decimal = True
 for x in number:
   decimalAns += str(x)
-  if numberNeg == True:
-    decimalAns*=-1
+  #if numberNeg == True:
+  #  decimalAns*=-1
 for x in number2:
   decimalAns2 += str(x)
-  if numberNeg2 == True:
-    decimalAns2*=-1
+  #if numberNeg2 == True:
+  #  decimalAns2*=-1
 if decimal == False:
   for x in range(1,len(number)):
-    l = math.floor(math.log10(int(number[x])) + 1)
+    l = math.floor(math.log10(float(number[x])) + 1)
     ans = ans * math.pow(10,1)
-    ans += int(number[x])
+    ans += float(number[x])
   for x in range(1,len(number2)):
-    l = math.floor(math.log10(int(number2[x])) + 1)
+    l = math.floor(math.log10(float(number2[x])) + 1)
     ans2 = ans2 * math.pow(10,1)
-    ans2 += int(number2[x])
+    ans2 += float(number2[x])
 else:
   if numberNeg and numberNeg2:
-    ans = float(decimalAns[2:])
-    ans2 = float(decimalAns2[2:])
+    ans = float(decimalAns[0:])
+    ans2 = float(decimalAns2[0:])
   elif numberNeg and not numberNeg2:
-    ans = float(decimalAns[2:])
+    ans = float(decimalAns[0:])
     #ans = float(decimalAns)
     ans2 = float(decimalAns2)
   elif numberNeg2 and not numberNeg:
     ans = float(decimalAns)
-    ans2 = float(decimalAns2[2:])
+    ans2 = float(decimalAns2[0:])
 if numberNeg:
   ans=ans*-1
 if numberNeg2:
   ans2=ans2*-1
+print(ans)
+print(ans2)
 if operator == "+":
   final = ans+ans2
 elif operator == "-":
@@ -716,8 +718,18 @@ elif operator == "/":
   final = ans/ans2
 n.clear()
 numvar[0],numvar[1] = -70,148
+print(final)
 final = str(final)
-if decimal:
+if numberNeg and numberNeg2 and decimal:
+  for x in range(len(display)):
+    draw(final[x])
+elif numberNeg or numberNeg2 and decimal:
+  for x in range(len(display)+3):
+    draw(final[x])
+elif numberNeg or numberNeg2:
+  for x in range(len(display)+1):
+    draw(final[x])
+elif decimal:
   for x in range(len(display)-1):
     draw(final[x])
 else:
