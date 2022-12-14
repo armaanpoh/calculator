@@ -202,13 +202,11 @@ t.forward(50)
 
 def draw(numb):
   n.goto(numvar[0], numvar[1])
-  n.pendown
+  n.pendown()
   n.color("black")
   n.write(numb, move=True, align="center", font=("Arial", 16, "normal"))
   n.penup()
-  #print(numvar[0])
   numvar[0] += 15
-  #print(numvar[0])
 
 def highlight(x,y):
   t.penup()
@@ -401,6 +399,7 @@ while (True):
             draw(x) 
       if full==False:
         draw(0)
+        
     elif (res == "."):
       highlight(80,190)
       number = number+[numberchoice]
@@ -415,11 +414,14 @@ while (True):
             draw(x)
       if full==False:
         draw(".")
+        
     elif (res == "-"):
+      highlight(-90,-10)
       numberNeg = True
       if len(display)+per+neg < 9:
         display.insert(0,numberchoice)
         n.clear()
+        n.penup()
         numvar[0],numvar[1] = -70,148
         for x in display:
           draw(x)
@@ -639,6 +641,7 @@ while (True):
       if full==False:
         draw(".")
     elif (res == "-"):
+      highlight(-90,-10)
       numberNeg2 = True
       if len(display)+per+neg < 9:
         display.insert(0,numberchoice2)
@@ -657,6 +660,7 @@ while (True):
       
     elif (numberchoice2 == ""):
       break
+      highlight(-40,40)
     else:
       print("Try again. ")
   except:
