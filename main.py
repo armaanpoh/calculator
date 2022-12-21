@@ -286,8 +286,11 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number = number+[numberchoice]
+      print(number)
       if len(display)+per+neg < 9:
         display.append(numberchoice)
+        for x in display:
+          print(x)
       if len(display)+per+neg == 9:
           display.pop(0)
           full=True
@@ -459,7 +462,7 @@ elif (operator == "/"):
   n.clear()
   numvar[0],numvar[1] = -70,148
   highlight(80,-10)
-
+  
 display=[]
 while (True):
   numberchoice2 = input("Choose a second number. Press enter to continue. ")
@@ -487,15 +490,18 @@ while (True):
       t.penup()
       t.goto(numvar[0],numvar[1])
       number2 = number2+[numberchoice2]
+      print(number2)
       if len(display)+per+neg < 9:
         display.append(numberchoice2)
+        for x in display:
+            print(x)
       if len(display)+per+neg == 9:
           display.pop(0)
           full=True
           n.clear()
           numvar[0],numvar[1] = -70,148
           for x in display:
-            draw(x) 
+            draw(x)
       if full==False:
         draw(2)
     elif (numberchoice2 == "3"):
@@ -673,6 +679,10 @@ decimal = False
 decimalAns = ''
 decimalAns2 = ''
 for x in number:
+  print(x + "#1 first")
+for x in number2:
+  print(x + "#2 first")
+for x in number:
   if x == ".":
     decimal = True
 for x in number2:
@@ -686,26 +696,35 @@ for x in number2:
   decimalAns2 += str(x)
   #if numberNeg2 == True:
   #  decimalAns2*=-1
+print(decimal)
 if decimal == False:
-  for x in range(1,len(number)):
-    l = math.floor(math.log10(float(number[x])) + 1)
+  for x in range(0,len(number)):
+    l = math.floor(math.log10(float(number[x])))
     ans = ans * math.pow(10,1)
     ans += float(number[x])
-  for x in range(1,len(number2)):
-    l = math.floor(math.log10(float(number2[x])) + 1)
+  for x in range(0,len(number2)):
+    l = math.floor(math.log10(float(number2[x])))
     ans2 = ans2 * math.pow(10,1)
     ans2 += float(number2[x])
+  for x in number:
+    print(x + "#1 second")
+  for x in number2:
+    print(x + "#2 second")
 else:
   if numberNeg and numberNeg2:
-    ans = float(decimalAns[0:])
-    ans2 = float(decimalAns2[0:])
+    ans = float(decimalAns)#[0:]
+    ans2 = float(decimalAns2)#[0:]
   elif numberNeg and not numberNeg2:
-    ans = float(decimalAns[0:])
+    ans = float(decimalAns)#[0:]
     #ans = float(decimalAns)
     ans2 = float(decimalAns2)
   elif numberNeg2 and not numberNeg:
     ans = float(decimalAns)
-    ans2 = float(decimalAns2[0:])
+    ans2 = float(decimalAns2)#[0:]
+  for x in number:
+    print(x + "#1 third")
+  for x in number2:
+    print(x + "#2 third")
 if numberNeg:
   ans=ans*-1
 if numberNeg2:
@@ -722,15 +741,12 @@ elif operator == "/":
   final = ans/ans2
 n.clear()
 numvar[0],numvar[1] = -70,148
-print(final)
+#print(final)
 final = str(final)
-if numberNeg and numberNeg2 and decimal:
+if float(final) < 0 and decimal:
   for x in range(len(display)):
     draw(final[x])
-elif numberNeg or numberNeg2 and decimal:
-  for x in range(len(display)+3):
-    draw(final[x])
-elif numberNeg or numberNeg2:
+elif float(final) < 0:
   for x in range(len(display)+1):
     draw(final[x])
 elif decimal:
@@ -739,4 +755,4 @@ elif decimal:
 else:
   for x in range(len(display)):
     draw(final[x])
-print(final)
+#print(final)
