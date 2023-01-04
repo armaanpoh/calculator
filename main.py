@@ -711,6 +711,9 @@ if decimal == False:
   for x in number2:
     print(x + "#2 second")
 else:
+  ans = float(decimalAns)
+  ans2 = float(decimalAns2)#[0:]
+  """
   if numberNeg and numberNeg2:
     ans = float(decimalAns)#[0:]
     ans2 = float(decimalAns2)#[0:]
@@ -721,6 +724,7 @@ else:
   elif numberNeg2 and not numberNeg:
     ans = float(decimalAns)
     ans2 = float(decimalAns2)#[0:]
+  """
   for x in number:
     print(x + "#1 third")
   for x in number2:
@@ -741,16 +745,17 @@ elif operator == "/":
   final = ans/ans2
 n.clear()
 numvar[0],numvar[1] = -70,148
-#print(final)
+print(final)
 final = str(final)
+print(final)
 if float(final) < 0 and decimal:
-  for x in range(len(display)):
+  for x in range(len(display)+1):
     draw(final[x])
 elif float(final) < 0:
   for x in range(len(display)+1):
     draw(final[x])
 elif decimal:
-  for x in range(len(display)-1):
+  for x in range(len(display)+1):
     draw(final[x])
 else:
   for x in range(len(display)):
